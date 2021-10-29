@@ -10,10 +10,10 @@ app.use('/assets', express.static(path.join(__dirname, 'assets')));
 
 const nav = (url)=> {
  return `
-  <nav>
-    <a href='/' class='${ url === '/' ? 'selected' : ''}'>Home</a>
-    <a href='/users'  class='${url.startsWith('/users') ? 'selected' : ''}>Users</a>
-  </nav>
+    <nav>
+      <a href='/' class='${ url === '/' ? 'selected' : ''}'>Home</a>
+      <a href='/users'  class='${url.startsWith('/users') ? 'selected' : ''}'>Users</a>
+    </nav>
  `;
 };
 
@@ -24,7 +24,7 @@ app.get ('/', (req, res, next)=> {
       <link rel='stylesheet' href='/assets/styles.css' />
     </head>
     <body>
-    ${ nav(req.url) }
+    ${ nav(req.url)}
     <h1>Acme Company</h1>
     </body>
   </html>`
