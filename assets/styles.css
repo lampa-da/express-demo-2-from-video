@@ -1,0 +1,12 @@
+body{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+nav{
+  display: flex;
+  justify-content: space-around;
+}
+
+nav a.selected{
+  text-decoration: none;
+  font-weight: bold;
+}
